@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rémi Gautier — ePortfolio</title>
+  <meta name="author" content="GAUTIER Rémi">
+  <meta name="description" content="ePortfolio de Rémi Gautier, étudiant en BUT Réseaux &amp; Télécommunications à l'IUT de Blagnac, futur expert en cybersécurité.">
+  <script>(function(){var t=null,m=/[?&]theme=(light|dark|cyber|zelda)\b/.exec(location.search);if(m)t=m[1];if(!t){try{t=localStorage.getItem("rg_theme")}catch(e){}}if(!t){var w=/(?:^|&)rg_theme=(light|dark|cyber|zelda)/.exec(window.name||"");if(w)t=w[1]}if(t==="light"||t==="cyber"||t==="zelda")document.documentElement.setAttribute("data-theme",t)})();</script>
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="zelda/zelda.css">
+</head>
+<body>
+  <div class="home">
+    <header class="home__bar">
+      <a class="brand" href="index.html"><span class="brand__dot" aria-hidden="true"></span>RG/ePortfolio</a>
+      <div class="home__status mono" style="align-items:center">
+        <span class="hide-sm" data-key="st_node">Nœud <b>Blagnac, FR</b></span>
+        <span class="hide-sm" data-key="st_state">Statut <b class="phos">en ligne</b></span>
+        <span><b id="clock">--:--:--</b></span>
+        <select id="language-select" class="lang-selector" aria-label="Langue / Language"><option value="fr">FR</option><option value="en">EN</option></select>
+      </div>
+    </header>
+
+    <main>
+      <section class="home__intro">
+        <h1 class="home__title">
+          <span class="line"><span>Rémi</span></span>
+          <span class="line"><span><em>Gautier.</em></span></span>
+        </h1>
+        <div class="home__aside">
+          <p class="mono phos" data-key="intro_tag">// BUT Réseaux &amp; Télécommunications</p>
+          <p data-key="intro_text">Étudiant à l'IUT de Blagnac, je me prépare à devenir <strong>expert en cybersécurité</strong>. Choisis une destination ci-dessous — ou pilote le site depuis le terminal.</p>
+        </div>
+      </section>
+
+      <label class="term" for="cmd">
+        <span class="term__prompt">rémi@portfolio:~$</span>
+        <input id="cmd" type="text" autocomplete="off" spellcheck="false" placeholder="tape une commande (help, profil, parcours…)" data-key-ph="ph_cmd" aria-describedby="cmd-out">
+        <span class="term__hint" data-key="term_hint">Raccourcis <kbd>1</kbd>–<kbd>7</kbd> · <kbd>/</kbd> · <kbd>Tab</kbd> · <kbd>↑</kbd></span>
+      </label>
+      <p class="term__out" id="cmd-out" aria-live="polite"></p>
+
+      <nav aria-label="Menu principal">
+        <ul class="switch">
+          <li><a href="aboutme.html" data-tag="cd /about">
+            <span class="switch__num">01</span>
+            <span class="switch__label" data-key="sw1">À propos <em>de moi</em></span>
+            <span class="switch__desc" data-key="sw1d">Identité, passions, films &amp; citation</span>
+            <span class="switch__go" aria-hidden="true">→</span>
+          </a></li>
+          <li><a href="profil.html" data-tag="cd /profil">
+            <span class="switch__num">02</span>
+            <span class="switch__label" data-key="sw2">Profil <em>pro</em></span>
+            <span class="switch__desc" data-key="sw2d">Formation, compétences, expériences &amp; CV</span>
+            <span class="switch__go" aria-hidden="true">→</span>
+          </a></li>
+          <li><a href="experience.html" data-tag="cd /experience">
+            <span class="switch__num">03</span>
+            <span class="switch__label" data-key="sw6">Expérience <em>pro</em></span>
+            <span class="switch__desc" data-key="sw6d">Mon stage en sécurité informatique</span>
+            <span class="switch__go" aria-hidden="true">→</span>
+          </a></li>
+          <li><a href="realisations.html" data-tag="cd /realisations">
+            <span class="switch__num">04</span>
+            <span class="switch__label" data-key="sw7">Réalisations <em>IUT</em></span>
+            <span class="switch__desc" data-key="sw7d">Mes SAé et projets du BUT</span>
+            <span class="switch__go" aria-hidden="true">→</span>
+          </a></li>
+          <li><a href="parcours.html" data-tag="cd /parcours">
+            <span class="switch__num">05</span>
+            <span class="switch__label" data-key="sw3">Parcours</span>
+            <span class="switch__desc" data-key="sw3d">Lycée, BUT R&amp;T, école d'ingénieur</span>
+            <span class="switch__go" aria-hidden="true">→</span>
+          </a></li>
+          <li><a href="bilanbut1.html" data-tag="cd /bilan">
+            <span class="switch__num">06</span>
+            <span class="switch__label" data-key="sw4">Bilan <em>BUT 1</em></span>
+            <span class="switch__desc" data-key="sw4d">Retour sur ma première année</span>
+            <span class="switch__go" aria-hidden="true">→</span>
+          </a></li>
+          <li><a href="mentionslegales.html" data-tag="cd /mentions">
+            <span class="switch__num">07</span>
+            <span class="switch__label" data-key="sw5">Mentions</span>
+            <span class="switch__desc" data-key="sw5d">Éditeur, hébergement, données</span>
+            <span class="switch__go" aria-hidden="true">→</span>
+          </a></li>
+        </ul>
+      </nav>
+    </main>
+
+    <div class="ticker mono" aria-hidden="true">
+      <div class="ticker__track">
+        <span data-key="tk_net">Réseaux</span><span data-key="tk_tel">Télécommunications</span><span data-key="tk_cyb">Cybersécurité</span><span>IUT de Blagnac</span><span>ePortfolio</span>
+        <span data-key="tk_net">Réseaux</span><span data-key="tk_tel">Télécommunications</span><span data-key="tk_cyb">Cybersécurité</span><span>IUT de Blagnac</span><span>ePortfolio</span>
+        <span data-key="tk_net">Réseaux</span><span data-key="tk_tel">Télécommunications</span><span data-key="tk_cyb">Cybersécurité</span><span>IUT de Blagnac</span><span>ePortfolio</span>
+        <span data-key="tk_net">Réseaux</span><span data-key="tk_tel">Télécommunications</span><span data-key="tk_cyb">Cybersécurité</span><span>IUT de Blagnac</span><span>ePortfolio</span>
+      </div>
+    </div>
+
+    <footer class="home__foot mono">
+      <span data-key="footer_copy_home">© Rémi Gautier — Étudiant en 3<sup>e</sup> année de BUT</span>
+    </footer>
+  </div>
+
+  <div class="cursor-tag" aria-hidden="true"></div>
+  <script>window.PAGE_I18N = {"en": {"sw1": "About <em>me<\/em>", "sw1d": "Identity, passions, movies &amp; quote", "sw2": "Pro <em>profile<\/em>", "sw2d": "Education, skills, experience &amp; resume", "sw6": "Work <em>experience<\/em>", "sw6d": "My IT security internship", "sw3": "Background", "sw3d": "High school, BUT R&amp;T, engineering school", "sw4": "Year 1 <em>review<\/em>", "sw4d": "Looking back on my first year", "sw5": "Legal", "sw5d": "Publisher, hosting, data", "ph_cmd": "type a command (help, profile, background…)", "_title": "Rémi Gautier — ePortfolio", "tk_net": "Networks", "tk_tel": "Telecommunications", "tk_cyb": "Cybersecurity", "st_node": "Node <b>Blagnac, FR<\/b>", "st_state": "Status <b class=\"phos\">online<\/b>", "intro_tag": "// BUT Networks &amp; Telecommunications", "intro_text": "Student at the IUT de Blagnac, I'm preparing to become a <strong>cybersecurity expert<\/strong>. Pick a destination below — or drive the site from the terminal.", "term_hint": "Shortcuts <kbd>1<\/kbd>–<kbd>7<\/kbd> · <kbd>/<\/kbd> · <kbd>Tab<\/kbd> · <kbd>↑<\/kbd>", "footer_copy_home": "© Rémi Gautier — 3<sup>rd<\/sup>-year BUT student", "sw7": "IUT <em>projects<\/em>", "sw7d": "My SAé and BUT projects"}};</script>
+  <script src="assets/site.js"></script>
+  <script src="assets/lang.js"></script>
+  <script src="zelda/zelda.js"></script>
+  <script src="assets/home.js"></script>
+</body>
+</html>
