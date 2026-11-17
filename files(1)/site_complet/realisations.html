@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Réalisations à l'IUT — Rémi Gautier</title>
+  <meta name="author" content="GAUTIER Rémi">
+  <meta name="description" content="Réalisations de Rémi Gautier à l'IUT : SAé 15, 23, 24, 32, 33 et 41 du BUT Réseaux &amp; Télécommunications.">
+  <script>(function(){var t=null,m=/[?&]theme=(light|dark|cyber|zelda)\b/.exec(location.search);if(m)t=m[1];if(!t){try{t=localStorage.getItem("rg_theme")}catch(e){}}if(!t){var w=/(?:^|&)rg_theme=(light|dark|cyber|zelda)/.exec(window.name||"");if(w)t=w[1]}if(t==="light"||t==="cyber"||t==="zelda")document.documentElement.setAttribute("data-theme",t)})();</script>
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/zelda.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand__dot" aria-hidden="true"></span>RG/ePortfolio</a>
+    <nav class="topnav" id="topnav" aria-label="Navigation principale">
+      <a href="index.html" data-key="nav_home"><span>00</span>Accueil</a>
+      <a href="aboutme.html" data-key="nav_about"><span>01</span>À propos</a>
+      <a href="profil.html" data-key="nav_pro"><span>02</span>Profil pro</a>
+      <a href="experience.html" data-key="nav_exp"><span>03</span>Expérience</a>
+      <a href="realisations.html" aria-current="page" data-key="nav_real"><span>04</span>Réalisations</a>
+      <a href="parcours.html" data-key="nav_path"><span>05</span>Parcours</a>
+      <a href="bilanbut1.html" data-key="nav_bilan"><span>06</span>Bilan BUT 1</a>
+      <a href="mentionslegales.html" data-key="nav_legal"><span>07</span>Mentions</a>
+    </nav>
+    <div class="topbar__tools">
+      <select id="language-select" class="lang-selector" aria-label="Langue / Language"><option value="fr">FR</option><option value="en">EN</option></select>
+      <button class="menu-toggle" type="button" aria-controls="topnav" aria-expanded="false">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div>
+        <p class="page-hero__path mono">~/ <b>realisations</b></p>
+        <h1 data-key="hero_title">Mes réalisations <em>à l'IUT.</em></h1>
+        <p class="page-hero__lead" data-key="hero_lead">Les SAé du BUT R&amp;T, classées par numéro : le sujet, ce qui a été fait et les outils utilisés.</p>
+      </div>
+      <span class="page-hero__num" aria-hidden="true">04</span>
+    </section>
+
+    <section class="block reveal">
+      <div class="block__label"><div><span class="mono">§ 04.1</span><h2 data-key="h_over">Vue d'ensemble</h2></div></div>
+      <div class="block__body">
+        <p data-key="intro">Une SAé (Situation d'Apprentissage et d'Évaluation) est un projet qui met en situation professionnelle. Voici celles que j'ai réalisées au fil du BUT.</p>
+        <table class="table">
+          <thead><tr><th data-key="th_sae">SAé</th><th data-key="th_subj">Sujet</th><th data-key="th_per">Période</th></tr></thead>
+          <tbody>
+            <tr><td><a href="#sae15">SAé 15</a></td><td><span data-key="o15">Données de capteurs IoT</span></td><td><span data-key="p15">BUT 1 · S1</span></td></tr>
+            <tr><td><a href="#sae23">SAé 23</a></td><td><span data-key="o23">Solution informatique pour l'entreprise</span></td><td><span data-key="p23">BUT 1 · S2</span></td></tr>
+            <tr><td><a href="#sae24">SAé 24</a></td><td><span data-key="o24">Localisation en intérieur</span></td><td><span data-key="p24">BUT 1 · S2</span></td></tr>
+            <tr><td><a href="#sae32">SAé 32</a></td><td><span data-key="o32">Protocoles sans fil</span></td><td><span data-key="p32">BUT 2 · S3</span></td></tr>
+            <tr><td><a href="#sae33">SAé 33</a></td><td><span data-key="o33">Réseau sécurisé multi-sites</span></td><td><span data-key="p33">BUT 2 · S3</span></td></tr>
+            <tr><td><a href="#sae41">SAé 41</a></td><td><span data-key="o41">RADIUS et 802.1X</span></td><td><span data-key="p41">BUT 2 · S4</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="block reveal" id="sae15">
+      <div class="block__label"><div><span class="mono">§ 04.2 · SAé 15</span><h2 data-key="t15">Gestion énergétique : données de capteurs IoT</h2></div></div>
+      <div class="block__body">
+        <p class="mono muted" data-key="m15">BUT 1 · Semestre 1 · Projet individuel</p>
+        <dl class="kv">
+          <dt data-key="s15_l">Sujet</dt><dd data-key="s15_v">Aider le service technique d'un bâtiment R&amp;T à mieux gérer son énergie : automatiser la collecte, le traitement et la présentation des données des capteurs de température des salles E101 et E102, puis publier les résultats sur un hébergeur web gratuit.</dd>
+          <dt data-key="r15_l">Ce qui a été réalisé</dt>
+          <dd>
+            <span data-key="r15_1">Un script Bash qui s'abonne au broker MQTT et stocke les mesures JSON des capteurs dans un fichier.</span><br>
+            <span data-key="r15_2">Le traitement des données avec jq : calcul du minimum, du maximum et de la moyenne, conservés d'une exécution à l'autre, avec leurs horodatages.</span><br>
+            <span data-key="r15_3">La génération automatique d'une page HTML avec trois tableaux (métriques, dernière valeur, historique), envoyée par FTP sur l'hébergeur.</span><br>
+            <span data-key="r15_4">Un diagramme de Gantt pour planifier le projet.</span>
+          </dd>
+          <dt data-key="s15_o">Outils</dt><dd data-key="s15_ov">Bash · MQTT (Mosquitto) · jq · HTML/CSS · FTP</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="block reveal" id="sae23">
+      <div class="block__label"><div><span class="mono">§ 04.3 · SAé 23</span><h2 data-key="t23">Mettre en place une solution informatique pour l'entreprise</h2></div></div>
+      <div class="block__body">
+        <p class="mono muted" data-key="m23">BUT 1 · Semestre 2 · Projet de groupe</p>
+        <dl class="kv">
+          <dt data-key="s23_l">Sujet</dt><dd data-key="s23_v">Exploiter les données des capteurs répartis dans les bâtiments de l'IUT et les présenter aux gestionnaires dans une interface simple et conviviale.</dd>
+          <dt data-key="r23_l">Ce qui a été réalisé</dt>
+          <dd>
+            <span data-key="r23_1">Une chaîne de traitement avec des conteneurs Docker : Mosquitto (broker MQTT), Node-RED, InfluxDB (série temporelle) et Grafana (visualisation).</span><br>
+            <span data-key="r23_2">Un site web dynamique avec base de données MySQL, gestion de comptes (administrateur, gestionnaire, utilisateur), tâches planifiées en Bash/PHP et affichage des métriques (min, max, moyenne) en tableaux et graphiques.</span><br>
+            <span data-key="r23_3">Un travail en groupe avec Git/GitHub, Trello et diagramme de Gantt.</span>
+          </dd>
+          <dt data-key="s23_o">Outils</dt><dd data-key="s23_ov">Docker · MQTT · Node-RED · InfluxDB · Grafana · MySQL · PHP · Bash · Git/GitHub</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="block reveal" id="sae24">
+      <div class="block__label"><div><span class="mono">§ 04.4 · SAé 24</span><h2 data-key="t24">Approches de localisation en environnement intérieur</h2></div></div>
+      <div class="block__body">
+        <p class="mono muted" data-key="m24">BUT 1 · Semestre 2 · Projet de groupe</p>
+        <dl class="kv">
+          <dt data-key="s24_l">Sujet</dt><dd data-key="s24_v">Estimer la position d'un objet ou d'une personne dans une salle de TP, puis afficher le résultat sur une interface web. Deux approches : le son (retrouver un objet qui émet un signal) et les ultrasons (localiser une personne).</dd>
+          <dt data-key="r24_l">Ce qui a été réalisé</dt>
+          <dd>
+            <span data-key="r24_1">Partie son : trois microphones sur Raspberry Pi, signal transmis en FSK, atténuation du signal en fonction de la distance, cartographie des amplitudes et estimation de la position d'un objet qui se déplace de case en case.</span><br>
+            <span data-key="r24_2">Partie ultrasons : trois Raspberry Pi avec capteurs à ultrasons (GrovePi+) et localisation d'une personne par trilatération.</span><br>
+            <span data-key="r24_3">Mesures publiées via MQTT, stockées en base de données, avec un site web pour présenter le projet.</span>
+          </dd>
+          <dt data-key="s24_o">Outils</dt><dd data-key="s24_ov">Raspberry Pi · MQTT · MySQL/InfluxDB · Python · PHP · JavaScript · Git/GitHub</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="block reveal" id="sae32">
+      <div class="block__label"><div><span class="mono">§ 04.5 · SAé 32</span><h2 data-key="t32">Développement de protocoles de communication sans fil</h2></div></div>
+      <div class="block__body">
+        <p class="mono muted" data-key="m32">BUT 2 · Semestre 3 · Projet de groupe</p>
+        <dl class="kv">
+          <dt data-key="s32_l">Sujet</dt><dd data-key="s32_v">Programmer en C des nœuds M5Stack pour construire, étape par étape, une communication radio fiable : liaison de données (LLC et MAC) puis routage par inondation.</dd>
+          <dt data-key="r32_l">Ce qui a été réalisé</dt>
+          <dd>
+            <span data-key="r32_1">Partie 1 : échange de trames entre émetteur et récepteur, acquittement avec numéro de séquence et chien de garde, détection d'erreurs (XOR) et correction (Reed-Solomon).</span><br>
+            <span data-key="r32_2">Réseau multi-nœuds avec adressage source et destination, et accès au canal ALOHA avec attente aléatoire (backoff) pour éviter les collisions.</span><br>
+            <span data-key="r32_3">Partie 2 : routage par inondation, avec champ d'adressage, TTL pour limiter la durée de vie des paquets, numéro de séquence pour identifier la source et mémorisation des derniers paquets pour éviter les doublons.</span>
+          </dd>
+          <dt data-key="s32_o">Outils</dt><dd data-key="s32_ov">C · M5Stack · diagrammes de séquence · automates</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="block reveal" id="sae33">
+      <div class="block__label"><div><span class="mono">§ 04.6 · SAé 33</span><h2 data-key="t33">Concevoir un réseau informatique sécurisé multi-sites</h2></div></div>
+      <div class="block__body">
+        <p class="mono muted" data-key="m33">BUT 2 · Semestre 3 · Binôme</p>
+        <dl class="kv">
+          <dt data-key="s33_l">Sujet</dt><dd data-key="s33_v">Pour une entreprise fictive multi-sites au matériel performant mais au réseau « à plat » (aucun VLAN, pas de VPN entre les sites), concevoir une architecture réseau sécurisée et présenter le projet à l'oral.</dd>
+          <dt data-key="r33_l">Ce qui a été réalisé</dt>
+          <dd>
+            <span data-key="r33_1">Une analyse de l'existant, une topologie et des spécifications : Cisco Catalyst 9200, routeur ISR 1100, ASA virtuel et IPv6 en dual-stack.</span><br>
+            <span data-key="r33_2">Une segmentation en VLAN avec routage inter-VLAN sur le cœur de réseau, OSPF en interne, BGP via MPLS entre les sites et VPN IPsec pour les sites hors MPLS.</span><br>
+            <span data-key="r33_3">Une politique de sécurité : pare-feu Fortigate (filtrage stateful, IPS/IDS), ACL étendues, SSH/HTTPS à la place de Telnet/HTTP, authentification AAA et centralisation des logs.</span><br>
+            <span data-key="r33_4">Une estimation du coût : environ 34 300 € de matériel et 57 000 € par an de logiciels et licences.</span>
+          </dd>
+          <dt data-key="s33_o">Outils</dt><dd data-key="s33_ov">Cisco · Fortigate · VLAN · OSPF · BGP/MPLS · IPsec · ACL · IPv6</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="block reveal" id="sae41">
+      <div class="block__label"><div><span class="mono">§ 04.7 · SAé 41</span><h2 data-key="t41">TP RADIUS : authentification 802.1X</h2></div></div>
+      <div class="block__body">
+        <p class="mono muted" data-key="m41">BUT 2 · Semestre 4 · Binôme</p>
+        <dl class="kv">
+          <dt data-key="s41_l">Sujet</dt><dd data-key="s41_v">Contrôler l'accès au réseau avec un serveur RADIUS : un switch n'autorise un poste à se connecter qu'après authentification 802.1X, puis le place dans le bon VLAN.</dd>
+          <dt data-key="r41_l">Ce qui a été réalisé</dt>
+          <dd>
+            <span data-key="r41_1">Configuration d'un switch Cisco en authentificateur 802.1X (AAA, ports PC et serveur) et installation d'un serveur FreeRADIUS testé en local.</span><br>
+            <span data-key="r41_2">Une solution complète : quatre VLAN, serveur RADIUS/DHCP dans le VLAN de gestion, relais DHCP vers les autres VLAN et routeur avec une passerelle par VLAN.</span><br>
+            <span data-key="r41_3">Une règle de sécurité (ACL) interdisant aux utilisateurs d'un VLAN de pinger l'adresse de gestion du switch.</span>
+          </dd>
+          <dt data-key="s41_o">Outils</dt><dd data-key="s41_ov">Cisco IOS · FreeRADIUS · 802.1X · VLAN · DHCP · ACL</dd>
+        </dl>
+      </div>
+    </section>
+
+    <a class="next" href="parcours.html"><span class="mono" data-key="nxt_05">Suivant — 05</span><span class="next__title"><span data-key="nm_path">Mon parcours</span><span>→</span></span></a>
+  </main>
+
+  <footer class="footer mono">
+    <span data-key="footer_copy">© Rémi Gautier — Étudiant en 3<sup>e</sup> année de BUT R&amp;T</span>
+  </footer>
+  <script>window.PAGE_I18N = {"en": {"s15_l": "Subject", "s15_v": "Help the technical department of an R&amp;T building manage its energy better: automate the collection, processing and presentation of the temperature sensor data of rooms E101 and E102, then publish the results on a free web host.", "r15_l": "What was done", "r15_1": "A Bash script that subscribes to the MQTT broker and stores the sensors' JSON measurements in a file.", "r15_2": "Data processing with jq: minimum, maximum and average, kept from one run to the next, with their timestamps.", "r15_3": "Automatic generation of an HTML page with three tables (metrics, latest value, history), sent by FTP to the host.", "r15_4": "A Gantt chart to plan the project.", "s15_o": "Tools", "s15_ov": "Bash · MQTT (Mosquitto) · jq · HTML/CSS · FTP", "t15": "Energy management: IoT sensor data", "m15": "BUT 1 · Semester 1 · Individual project", "s23_l": "Subject", "s23_v": "Use the data from the sensors spread across the IUT buildings and present it to building managers in a simple, user-friendly interface.", "r23_l": "What was done", "r23_1": "A processing chain with Docker containers: Mosquitto (MQTT broker), Node-RED, InfluxDB (time series) and Grafana (visualization).", "r23_2": "A dynamic website with a MySQL database, account management (administrator, manager, user), scheduled Bash/PHP tasks and display of metrics (min, max, average) in tables and charts.", "r23_3": "Teamwork with Git/GitHub, Trello and a Gantt chart.", "s23_o": "Tools", "s23_ov": "Docker · MQTT · Node-RED · InfluxDB · Grafana · MySQL · PHP · Bash · Git/GitHub", "t23": "Setting up an IT solution for a company", "m23": "BUT 1 · Semester 2 · Group project", "s24_l": "Subject", "s24_v": "Estimate the position of an object or a person in a lab room, then display the result on a web interface. Two approaches: sound (finding an object that emits a signal) and ultrasound (locating a person).", "r24_l": "What was done", "r24_1": "Sound part: three microphones on Raspberry Pi, signal sent over FSK, signal attenuation as a function of distance, amplitude mapping and position estimation of an object moving cell by cell.", "r24_2": "Ultrasound part: three Raspberry Pi with ultrasonic sensors (GrovePi+) and location of a person by trilateration.", "r24_3": "Measurements published over MQTT and stored in a database, with a website to present the project.", "s24_o": "Tools", "s24_ov": "Raspberry Pi · MQTT · MySQL/InfluxDB · Python · PHP · JavaScript · Git/GitHub", "t24": "Indoor location approaches", "m24": "BUT 1 · Semester 2 · Group project", "s32_l": "Subject", "s32_v": "Program M5Stack nodes in C to build, step by step, a reliable radio communication: data link layer (LLC and MAC) then flooding routing.", "r32_l": "What was done", "r32_1": "Part 1: frame exchange between sender and receiver, acknowledgment with sequence number and watchdog, error detection (XOR) and correction (Reed-Solomon).", "r32_2": "Multi-node network with source and destination addressing, and ALOHA channel access with random backoff to avoid collisions.", "r32_3": "Part 2: flooding routing, with an address field, a TTL to limit packet lifetime, a sequence number to identify the source and memory of the latest packets to avoid duplicates.", "s32_o": "Tools", "s32_ov": "C · M5Stack · sequence diagrams · state machines", "t32": "Developing wireless communication protocols", "m32": "BUT 2 · Semester 3 · Group project", "s33_l": "Subject", "s33_v": "For a fictional multi-site company with high-end hardware but a “flat” network (no VLANs, no VPN between sites), design a secure network architecture and present the project orally.", "r33_l": "What was done", "r33_1": "An analysis of the existing network, a topology and specifications: Cisco Catalyst 9200, ISR 1100 router, virtual ASA and dual-stack IPv6.", "r33_2": "VLAN segmentation with inter-VLAN routing on the core, OSPF internally, BGP over MPLS between sites and IPsec VPN for sites outside the MPLS.", "r33_3": "A security policy: Fortigate firewall (stateful filtering, IPS/IDS), extended ACLs, SSH/HTTPS instead of Telnet/HTTP, AAA authentication and centralized logs.", "r33_4": "A cost estimate: about €34,300 for hardware and €57,000 per year for software and licenses.", "s33_o": "Tools", "s33_ov": "Cisco · Fortigate · VLAN · OSPF · BGP/MPLS · IPsec · ACL · IPv6", "t33": "Designing a secure multi-site computer network", "m33": "BUT 2 · Semester 3 · Pair project", "s41_l": "Subject", "s41_v": "Control network access with a RADIUS server: a switch only lets a computer connect after 802.1X authentication, then places it in the right VLAN.", "r41_l": "What was done", "r41_1": "Configuring a Cisco switch as an 802.1X authenticator (AAA, PC and server ports) and installing a FreeRADIUS server tested locally.", "r41_2": "A complete solution: four VLANs, RADIUS/DHCP server in the management VLAN, DHCP relay to the other VLANs and a router with one gateway per VLAN.", "r41_3": "A security rule (ACL) preventing users in one VLAN from pinging the switch's management address.", "s41_o": "Tools", "s41_ov": "Cisco IOS · FreeRADIUS · 802.1X · VLAN · DHCP · ACL", "t41": "RADIUS lab: 802.1X authentication", "m41": "BUT 2 · Semester 4 · Pair project", "th_sae": "SAé", "th_subj": "Subject", "th_per": "Period", "o15": "IoT sensor data", "p15": "BUT 1 · S1", "o23": "IT solution for a company", "p23": "BUT 1 · S2", "o24": "Indoor location", "p24": "BUT 1 · S2", "o32": "Wireless protocols", "p32": "BUT 2 · S3", "o33": "Secure multi-site network", "p33": "BUT 2 · S3", "o41": "RADIUS and 802.1X", "p41": "BUT 2 · S4", "hero_title": "My <em>IUT projects.<\/em>", "hero_lead": "The BUT R&amp;T SAé projects, in numerical order: the subject, what was done and the tools used.", "h_over": "Overview", "intro": "A SAé (Learning and Assessment Situation) is a project set in a professional context. Here are the ones I completed during the BUT.", "nxt_05": "Next — 05", "nm_path": "My background", "_title": "IUT projects — Rémi Gautier"}};</script>
+  <script src="assets/site.js"></script>
+  <script src="assets/lang.js"></script>
+  <script src="assets/zelda.js"></script>
+</body>
+</html>
